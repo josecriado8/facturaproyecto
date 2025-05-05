@@ -1,0 +1,170 @@
+/* Contenedor principal del formulario */
+form {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.09);
+  padding: 2.5rem 2rem;
+  margin: 2rem auto;
+  max-width: 1100px;
+}
+
+/* Cada columna/sección */
+.form-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  min-width: 220px;
+}
+
+/* Títulos de sección */
+.form-section-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #1976d2;
+  margin-bottom: 1rem;
+  letter-spacing: 0.5px;
+}
+
+/* Grupo de input */
+.form-group {
+  margin-bottom: 0.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 0.35rem;
+  font-weight: 500;
+  color: #222;
+  letter-spacing: 0.2px;
+}
+
+.form-control {
+  padding: 0.55rem 0.85rem;
+  border: 1.5px solid #e0e0e0;
+  border-radius: 7px;
+  font-size: 1rem;
+  background: #f8fafc;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-control:focus {
+  border-color: #1976d2;
+  background: #fff;
+  outline: none;
+  box-shadow: 0 0 0 2px #1976d230;
+}
+
+.is-invalid {
+  border-color: #dc3545;
+  background-color: #fff0f0;
+}
+
+.error {
+  color: #dc3545;
+  font-size: 0.92rem;
+  margin-top: 0.18rem;
+}
+
+button[type="submit"] {
+  margin-top: 2rem;
+  padding: 0.7rem 2.2rem;
+  background: linear-gradient(90deg, #1976d2 60%, #42a5f5 100%);
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px #1976d220;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+
+button[type="submit"]:hover {
+  background: linear-gradient(90deg, #1565c0 60%, #64b5f6 100%);
+  box-shadow: 0 4px 16px #1976d230;
+}
+
+.concepto-row {
+  display: block;
+  gap: 0.5rem;
+  align-items: flex-end;
+  margin-bottom: 1rem;
+}
+
+.add-concept-btn {
+  margin-top: 0.5rem;
+  background: #1976d2;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 0.4rem 1.2rem;
+  font-weight: 600;
+}
+
+.remove-concept-btn {
+  margin-top: 0.5rem;
+  height: 40px;
+  background: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 0 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* --- Responsive styles for mobile --- */
+@media (max-width: 700px) {
+  form {
+    flex-direction: column;
+    gap: 1.2rem;
+    padding: 1.2rem 0.5rem;
+    min-width: 70vw;
+  }
+
+  .form-section {
+    min-width: unset;
+    width: 100%;
+    gap: 0.7rem;
+  }
+
+  .form-section-title {
+    font-size: 1rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .form-group {
+    margin-bottom: 0.3rem;
+  }
+
+  .form-control {
+    font-size: 0.98rem;
+    padding: 0.45rem 0.7rem;
+  }
+
+  button[type="submit"] {
+    width: 100%;
+    padding: 0.7rem 0;
+    font-size: 1rem;
+    margin-top: 1.2rem;
+  }
+
+  .concepto-row {
+    margin-bottom: 0.7rem;
+  }
+
+  .remove-concept-btn {
+    width: 15%;
+    padding: 0.4rem 0;
+    font-size: 1rem;
+    margin-top: 0.4rem;
+  }
+}
+
